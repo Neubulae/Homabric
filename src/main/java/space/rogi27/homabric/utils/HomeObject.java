@@ -52,8 +52,8 @@ public class HomeObject {
         ServerWorld homeWorld = player.getServer().getWorld(RegistryKey.of(Registry.WORLD_KEY, new Identifier(this.world)));
         Vec3d oldPos = player.getPos();
         player.teleport(homeWorld, this.x, this.y, this.z, this.yaw, this.pitch);
-        player.getWorld().spawnParticles(ParticleTypes.GLOW_SQUID_INK, oldPos.x, oldPos.y, oldPos.z, 50, 2, 2, 2, 0.1);
-        player.getWorld().spawnParticles(ParticleTypes.GLOW_SQUID_INK, this.x, this.y, this.z, 50, 2, 2, 2, 0.1);
+        player.getServerWorld().spawnParticles(ParticleTypes.GLOW_SQUID_INK, oldPos.x, oldPos.y, oldPos.z, 50, 2, 2, 2, 0.1);
+        player.getServerWorld().spawnParticles(ParticleTypes.GLOW_SQUID_INK, this.x, this.y, this.z, 50, 2, 2, 2, 0.1);
         return true;
     }
 
